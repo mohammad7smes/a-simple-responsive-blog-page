@@ -1,0 +1,370 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+p{
+    text-align: justify;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ededed;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    line-height: 2rem;
+    letter-spacing: .5px;
+    /* word-break: break-all; */
+    
+}
+
+.body-overflow-hidden{
+    overflow-y: hidden;
+}
+
+/* ------------------------------------------------------------------------ */
+/* ---------------------------------HEADER--------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 2px 2px 15px grey;
+}
+
+.logo {
+    margin: 10px;
+}
+
+.links {
+    box-shadow: 0px 2px 15px grey;
+    width: 70%;
+    height: 100vh;
+    text-align: center;
+    padding: 0px 2%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translateX(100%);
+    transition: all .5s;
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.show-links {
+    transform: translateX(0%);
+}
+
+.links a {
+
+    font-size: 22px;
+    margin-top: 50px;
+
+}
+
+.links a:hover {
+    color: red;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: block;
+    margin: 20px;
+}
+
+.ham-top,
+.ham-middle,
+.ham-bottom {
+    display: block;
+    width: 30px;
+    border: 1px solid black;
+    background-color: black;
+    transition: .5s all;
+}
+
+.ham-middle {
+    transform: translateY(10px);
+}
+
+.ham-bottom {
+    transform: translateY(20px);
+}
+
+.ham-topClick {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.ham-bottomClick {
+    transform: rotate(-45deg) translate(-8px, 7px);
+}
+
+.dispaly-none {
+    display: none;
+}
+
+.btnSignUp {
+    display: none;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+/* ---------------------------------Main--------------------------------- */
+/* ------------------------------------------------------------------------ */
+
+.main-filter{
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+
+.hero-container-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.breakingnews {
+    text-align: center;
+}
+
+.breImg {
+    margin-top: 1.5rem;
+}
+
+.date-news {
+    margin-top: 5%;
+    color: rgb(110, 108, 108);
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+
+}
+
+.date-news span {
+    margin: 0% .5rem;
+}
+
+.breText{
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.aboutArticle{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.aboutArticle span{
+    color: rgb(102, 97, 97);
+}
+
+.breText button{
+    background-color: transparent;
+    border: none;
+    border-radius: 2px;
+    padding: 1px;
+    color: rgb(39, 121, 198);
+}
+
+.breText button:focus{
+    border: 1px dashed black;
+}
+
+.somerep{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.sportsnews{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.sportsnews h1{
+    background-color: skyblue;
+    margin: 3rem 0 ;
+    display: inline;
+    width: 20px;
+    transform: translateX(12rem);
+}
+
+
+    /* ------------------------------------------------------------------------ */
+    /* ---------------------------------Footer--------------------------------- */
+    /* ------------------------------------------------------------------------ */
+
+
+.subscribe{
+    background-color: rgb(162, 10, 10);
+    color: wheat;
+    font-size: 13px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.subscribe button{
+    background-color: #ededed;
+    border: none;
+    padding: 5px;
+    margin-top: 2rem;
+    color: rgb(162, 10, 10);
+    font-size: 20px;
+}
+.subscribe button:hover{
+    background-color: rgb(39, 121, 198);
+    color: wheat;
+}
+
+.footer{
+    background-color: rgb(4, 16, 28);
+    color: wheat;
+    padding-top: 10px;
+    
+    
+}
+.footer div{
+    margin: 0% 6rem;
+}
+
+
+@media screen and (min-width:669px) {
+
+    /* ------------------------------------------------------------------------ */
+    /* ---------------------------------HEADER--------------------------------- */
+    /* ------------------------------------------------------------------------ */
+
+    
+    nav {
+        box-shadow: 2px 2px 15px grey;
+    }
+
+    .links {
+        display: flex;
+        width: 50%;
+        top: 4%;
+        left: -30%;
+        height: 3rem;
+        background-color: transparent;
+        box-shadow: none;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .links a {
+        font-size: 17px;
+        margin: 1% 10%;
+        display: inline-block;
+        width: 120px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .btnSignUp {
+        display: block;
+        width: 80px;
+        margin: 20px;
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .btnSignUp:hover {
+        background-color: rgb(162, 10, 10);
+        color: white;
+    }
+
+    /* ------------------------------------------------------------------------ */
+    /* ---------------------------------Main--------------------------------- */
+    /* ------------------------------------------------------------------------ */
+
+
+    .aboutArticle{
+
+    }
+
+
+}
+
+
+
+@media screen and (min-width:992px) {
+    .links{
+        left: -30%;
+    }
+    .date-news{
+        flex-direction: row;
+    }
+    .aboutsbreakings {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .breImg {
+        width: 40%;
+        margin-left: 1rem;
+    }
+    .breText{
+        width: 50%;
+        margin:2rem 5rem;
+    }
+    .subscribe{
+        font-size: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .subscribe div{
+         margin-top: 2rem;
+         margin-left: 1rem;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    /* ------------------------------------------------------------------------ */
+    /* ---------------------------------HEADER--------------------------------- */
+    /* ------------------------------------------------------------------------ */
+    .links a {
+        margin: 2% 10%;
+    }
+
+
+    /* ------------------------------------------------------------------------ */
+    /* ---------------------------------Main--------------------------------- */
+    /* ------------------------------------------------------------------------ */
+}
